@@ -1,0 +1,33 @@
+<?xml-stylesheet type="text/xsl" href="material.xsl" ?>
+
+<root>
+  <page>
+    <title>Material XSL</title>
+    <favicon>https://widgetbot.io/favicon.ico</favicon>
+    <description>Who said you needed Javascript for Material design web apps?</description>
+  </page>
+  <colors>
+    <!-- <default>#879</default>
+    <primary>#f5f</primary>
+    <secondary>#888</secondary> -->
+  </colors>
+  <html>
+    <div>
+      <md-button color="default">Default</md-button>
+      <md-button color="primary">Primary</md-button>
+      <md-button color="secondary">Secondary</md-button>
+      <md-button color="secondary" disabled="">Disabled</md-button>
+    </div>
+    <div>
+      <md-button color="default" variant="raised">Default</md-button>
+      <md-button color="primary" variant="raised">Primary</md-button>
+      <md-button color="secondary" variant="raised">Secondary</md-button>
+      <md-button color="secondary" variant="raised" disabled="">Disabled</md-button>
+    </div>
+    <div>
+      <md-button color="primary" variant="raised" size="small">Small</md-button>
+      <md-button color="primary" variant="raised" size="medium">Medium</md-button>
+      <md-button color="primary" variant="raised" size="large">Large</md-button>
+    </div>
+  </html>
+</root>
