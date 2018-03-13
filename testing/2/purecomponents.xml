@@ -1,0 +1,52 @@
+<?xml-stylesheet type="text/xsl" href="purecomponents.xsl" ?>
+<html>
+  <body>
+    <div>
+      <Heading size="large">Large</Heading>
+      <Heading size="medium">Medium</Heading>
+      <Heading size="small">Small</Heading>
+    </div>
+    <div>
+      <md-button color="default">Default</md-button>
+      <md-button color="primary">Primary</md-button>
+      <md-button color="secondary">Secondary</md-button>
+      <md-button color="secondary" disabled="">Disabled</md-button>
+    </div>
+    <div>
+      <md-button color="default" variant="raised">Default</md-button>
+      <md-button color="primary" variant="raised">Primary</md-button>
+      <md-button color="secondary" variant="raised">Secondary</md-button>
+      <md-button color="secondary" variant="raised" disabled="">Disabled</md-button>
+    </div>
+    <div>
+      <md-button color="primary" variant="raised" size="small">Small</md-button>
+      <md-button color="primary" variant="raised" size="medium">Medium</md-button>
+      <md-button color="primary" variant="raised" size="large">Large</md-button>
+    </div>
+  </body>
+
+  <components>
+    <Heading>
+      <style>
+      Heading {
+        display: block;
+        font-family: 'Roboto', sans-serif;
+        font-size: 2em;
+        margin: 0.5em 0
+      }
+      Heading[size^="medium"] {
+        font-size: 1.5em
+      }
+      Heading[size^="small"] {
+        font-size: 1em
+      }
+      </style>
+      <children /> Heading!
+    </Heading>
+
+    <md-button>
+      <style>md-button,md-button:not([variant^=raised]){color:rgba(0,0,0,.87)}md-button{position:relative;display:inline-block;padding:8px 16px;min-width:88px;font-size:.875rem;box-sizing:border-box;min-height:36px;transition:background-color 250ms cubic-bezier(.4,0,.2,1) 0s,box-shadow 250ms cubic-bezier(.4,0,.2,1) 0s;line-height:1.4em;text-align:center;font-family:Roboto,Helvetica,Arial,sans-serif;font-weight:500;border-radius:2px;text-transform:uppercase;border:0;cursor:pointer;outline:0;margin:5px;user-select:none}md-button[size^=small]{padding:7px 8px;min-width:64px;font-size:.8125rem;min-height:32px}md-button[size^=large]{padding:8px 24px;min-width:112px;font-size:.9375rem;min-height:24px}md-button[variant^=raised]{box-shadow:inset 0 0 0 99999px transparent,0 1px 5px 0 rgba(0,0,0,.2),0 2px 2px 0 rgba(0,0,0,.14),0 3px 1px -2px rgba(0,0,0,.12);color:rgba(0,0,0,.87);background-color:#E0E0E0}md-button[variant^=raised]:hover{box-shadow:inset 0 0 0 99999px rgba(0,0,0,.2),0 1px 5px 0 rgba(0,0,0,.2),0 2px 2px 0 rgba(0,0,0,.14),0 3px 1px -2px rgba(0,0,0,.12)}md-button[variant^=raised]:active{box-shadow:inset 0 0 0 99999px rgba(0,0,0,.3),0 5px 5px -3px rgba(0,0,0,.2),0 8px 10px 1px rgba(0,0,0,.14),0 3px 14px 2px rgba(0,0,0,.12)}md-button:not([variant^=raised]):before{content:'';display:block;top:0;left:0;position:absolute;transition:background-color 250ms cubic-bezier(.4,0,.2,1) 0s;height:100%;border-radius:2px;opacity:.15;width:100%;z-index:-1}md-button:not([variant^=raised]):active:before{opacity:.2}md-button:not([variant^=raised]):hover:before{background-color:#000}md-button:not([variant^=raised])[color^=primary]:hover:before,md-button[variant^=raised][color^=primary]{color:#fff;background-color:#2196F3}md-button:not([variant^=raised])[color^=secondary]:hover:before,md-button[variant^=raised][color^=secondary]{color:#fff;background-color:#E10050}md-button:not([variant^=raised])[color^=primary]{color:#2196F3}md-button:not([variant^=raised])[color^=secondary]{color:#E10050}md-button[disabled]{background-color:rgba(0,0,0,.12)!important;color:rgba(0,0,0,.26)!important;pointer-events:none!important;box-shadow:none!important}</style>
+      <children />
+    </md-button>
+  </components>
+</html>

@@ -1,0 +1,61 @@
+<?xml-stylesheet type="text/xsl" href="material.xsl" ?>
+  <html>
+
+  <head>
+    <title>test</title>
+  </head>
+
+  <body>
+    <script>
+      const reserved = ['componentdidmount']
+      window.component = (name, component) => {
+        const node = component.previousElementSibling
+        const props = {}
+        for (let prop of node.attributes) {
+          if (reserved.includes(prop.name)) {
+            node.removeAttribute(prop.name)
+          }
+          props[prop.name] = prop.value
+        }
+
+        (function () {
+          console.log(this.props)
+        }).call({
+          props,
+        })
+
+        /**
+         * Remove unnecessary stuff
+         */
+        setTimeout(() => {
+          document.body.removeChild(component)
+          for (let prop of reserved) {
+            node.removeAttribute(prop)
+          }
+        })
+      }
+      document.body.removeChild(document.currentScript)
+      document.removeChild(document.documentElement.previousSibling)
+    </script>
+    <Heading
+      state="{
+        clicked: false
+      }"
+      componentDidMount="
+        console.log('mounted', this)
+      "
+      clicked="
+        this.setState({
+          clicked: true
+        })
+      "
+    >
+      <span onClick="this.clicked.bind(this)">test</span>
+      <if true="this.state.clicked = true">
+        Clicked!
+      </if>
+    </Heading>
+    <md-button>asd</md-button>
+  </body>
+
+  </html>
