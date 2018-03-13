@@ -12,7 +12,7 @@
   </xsl:template>
 
   <!-- Components -->
-  <xsl:template match="Group|Button|Heading">
+  <xsl:template match="About|Group|Button|Heading">
     <xsl:variable name="node" select="node()" />
     <xsl:variable name="name" select="name()" />
     <xsl:variable name="props" select="@*" />

@@ -3,6 +3,12 @@
   <body>
     <Grid>
       <Row>
+        <Group>About MaterialXSL</Group>
+        <Demo>
+          <About />
+        </Demo>
+      </Row>
+      <Row>
         <Group>Headers</Group>
         <Demo>
           <Heading size="large">Large</Heading>
@@ -59,6 +65,12 @@
     <Button>
       <children />
     </Button>
+
+    <About>
+      MaterialXSL allows you to write modular HTML which is parsed client side (without the need for Javascript enabled).
+
+      It can pre-process HTML using XSL, based around the concepts of Components.
+    </About>
   </components>
 
   <style>
@@ -80,6 +92,10 @@
       flex-direction: column;
       padding: 10px 20px;
       background-color: rgba(0,0,0,0.1);
+    }
+
+    About {
+      white-space: pre
     }
 
     Heading{display:block;font-family:Roboto,sans-serif;font-size:2em;margin:.5em 0}Heading[size^=medium]{font-size:1.5em}Heading[size^=small]{font-size:1em}Heading h1{font-size:inherit;font-weight:initial}
