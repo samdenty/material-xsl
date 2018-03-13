@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
+  <xsl:template match="//style"><style><xsl:copy-of select="@*|node()" /></style></xsl:template>
+
   <xsl:template name="Component">
     <xsl:param name="content" />
     <xsl:param name="children" />
@@ -10,7 +12,7 @@
   </xsl:template>
 
   <!-- Components -->
-  <xsl:template match="md-button|Heading">
+  <xsl:template match="Group|Button|Heading">
     <xsl:variable name="node" select="node()" />
     <xsl:variable name="name" select="name()" />
     <xsl:variable name="props" select="@*" />
@@ -30,6 +32,7 @@
   </xsl:template>
 
   <xsl:template match="components" />
+
   <xsl:template match="@*|node()">
     <xsl:copy>
       <xsl:apply-templates select="@*|node()" />
